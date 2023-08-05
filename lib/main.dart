@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_playground/tinder_location_finder/tinder_location_finder_page.dart';
 
+import 'currency_converter/views/currency_converter_page.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -21,6 +23,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => const HomePage(),
         '/tinder_location_finder': (context) =>
             const TinderLocationFinderPage(),
+        '/currency_converter': (context) => const CurrencyConverterPage(),
       },
     );
   }
@@ -46,6 +49,11 @@ class HomePage extends StatelessWidget {
                   Navigator.of(context).pushNamed('/tinder_location_finder');
                 },
                 child: const Text('Tinder location finder')),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed('/currency_converter');
+                },
+                child: const Text('Currency converter')),
           ],
         ),
       ),
